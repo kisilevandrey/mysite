@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% block title %}
+    Про время
+{% endblock %}
+{% block refresh %}
+<meta http-equiv="refresh" content="15; URL=">
+{% endblock %}
+{% block content %}
+<p> id = one>===это current_datetime.html===</p>
+сейчас у нас : {{current_date}}
+<p> id = two>===это current_datetime.html==</p>
+{% endblock %}
