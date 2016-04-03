@@ -24,9 +24,10 @@ def hey(request): # счетчик количества запросов
     global a
     a = a+1
     return HttpResponse(a)
+
 urlpatterns = [
     url(r'', include('blog.urls')),
-    url(r'^admin/', include(admin.site.urls),
+    url(r'^admin/', include(admin.site.urls)),
     url('^hello/$', hello),
     url('^time/$', current_datetime),
     url(r'^counter/$', hey),
