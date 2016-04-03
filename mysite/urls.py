@@ -31,5 +31,6 @@ urlpatterns = [
     url('^hello/$', hello),
     url('^time/$', current_datetime),
     url(r'^counter/$', hey),
+    url(r'^contact/',include('contact.urls'))
 ]
 

@@ -1,0 +1,29 @@
+<body>
+{% if errors %}
+    <ul>
+        {% for error in errors %}
+        <li style="color:red;">
+            {{ error }}
+        {% endfor %}
+    </ul>
+{% endif %}
+    <form action="" method="post">
+        <label> имя </label><br>
+        <input name = "name" value = "{{form.name}}"type = "text">
+        <br>
+
+        <label> E-mail </label><br>
+        <input name = "email" value = "{{form.email}}"type = "text">
+        <br>
+
+        <label> Сообщение </label><br>
+        <textarea name = "message"> {{form.message}} разб дваб три
+        </textarea>
+    <input value ="отправить" type = "submit">
+        {% csrf_token %}
+    </form>
+</body>
+
+
+
+<input
