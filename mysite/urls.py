@@ -13,11 +13,13 @@ Including another URLconf
     1. Import the include() function: from django.conf.urls import url, include
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
-from django.conf.urls import include, url
+from django.conf.urls import patterns, include, url
 from django.contrib import admin
 from mysite.views import hello
 from mysite.views import current_datetime
 from django.http import HttpResponse
+#from django.conf.urls.defaults import *
+from people.views import index
 
 a = 0
 def hey(request): # счетчик количества запросов
@@ -31,6 +33,8 @@ urlpatterns = [
     url('^hello/$', hello),
     url('^time/$', current_datetime),
     url(r'^counter/$', hey),
-    url(r'^contact/',include('contact.urls'))
+    url(r'^contact/',include('contact.urls')),
+    url(r'^People/$', 'people.views.index')
+
 ]
 
